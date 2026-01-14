@@ -1,0 +1,28 @@
+[project]
+name = "dtfw"
+version = "0.1.0"
+description = "Digital Twin Framework (discrete-event simulation with SimPy)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ahmed Ben Taher" }]
+dependencies = [
+  "simpy>=4.0.2",
+  "numpy>=1.26",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
