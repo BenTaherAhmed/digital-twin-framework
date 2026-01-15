@@ -17,6 +17,5 @@ def test_engine_reproducibility():
     e1 = Engine(seed=42)
     e2 = Engine(seed=42)
 
-    import random
-
-    assert random.random() == random.random()
+    assert e1.rng.random() == e2.rng.random()
+    assert e1.rng.random() == e2.rng.random()
