@@ -1,6 +1,5 @@
 import random
 import simpy
-
 from dtfw.core.engine import Engine
 from dtfw.components.source import Source
 from dtfw.components.queue import Queue
@@ -8,7 +7,7 @@ from dtfw.components.server import Server
 from dtfw.components.sink import Sink
 
 
-def run(sim_time: int = 50):
+def run(sim_time: int = 300):
     engine = Engine(seed=42)
     env = engine.env
 
@@ -30,3 +29,8 @@ def run(sim_time: int = 50):
 
     engine.run(until=sim_time)
     return metrics
+
+
+if __name__ == "__main__":
+    m = run()
+    print(m["completed"])

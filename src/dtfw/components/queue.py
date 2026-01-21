@@ -1,9 +1,6 @@
 from __future__ import annotations
-
 import simpy
-
 from .base import Component
-
 
 class Queue(Component):
     def __init__(self, name: str, inp: simpy.Store, out: simpy.Store):

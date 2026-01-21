@@ -1,9 +1,6 @@
 from __future__ import annotations
-
 import simpy
-
 from .base import Component
-
 
 class Sink(Component):
     def __init__(self, name: str, inp: simpy.Store):
@@ -14,5 +11,4 @@ class Sink(Component):
         def run():
             while True:
                 _ = yield self.inp.get()
-
         engine.process(run())
