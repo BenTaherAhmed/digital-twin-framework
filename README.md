@@ -16,3 +16,15 @@ built to experiment with complex systems (queues, routing, capacity constraints,
 ## Installation
 ```bash
 pip install -e .[dev]
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/BenTaherAhmed/digital-twin-framework
+cd digital-twin-framework
+pip install -e .
+pytest
+
+
+
+
